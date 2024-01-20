@@ -1,9 +1,5 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 
-
-
-<h2 align="center">For the Herbs</h2>
-
 ## Online Farming Vs. Offline Farming
 
 ### Online Farming:
