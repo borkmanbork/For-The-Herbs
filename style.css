@@ -4,82 +4,70 @@ body, table {
     padding: 0;
 }
 
-/* Style the body background for dark mode */
+/* Style the body background */
 body {
-    background-color: #000; /* Dark Background for Dark Mode */
-    color: #fff; /* White Text */
+    background-color: #f5f5f5; /* Light Gray Background */
     font-family: Arial, sans-serif;
 }
 
 /* Style the leaderboard container */
 .leaderboard {
-    background-color: #111; /* Dark Gray Background for Leaderboard */
+    background-color: #007acc; /* Dark Blue Background */
     color: #fff; /* White Text */
-    padding: 10px;
+    padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #333; /* Darker Gray Border */
-    cursor: pointer; /* Add cursor pointer for collapsible behavior */
+    border-bottom: 5px solid #005fa3; /* Slightly Darker Blue Border */
 }
 
 /* Style the leaderboard title */
 .leaderboard h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-/* Style the table container for collapsible effect */
-.table-container {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 /* Style the table */
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #111; /* Dark Gray Background for Table */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for the table */
+    background-color: #fff; /* White Background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for the table */
 }
 
 /* Style the table header */
 table th {
-    background-color: #333; /* Dark Header Background */
+    background-color: #007acc; /* Dark Blue Header Background */
     color: #fff; /* White Text */
-    padding: 8px;
+    padding: 10px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
 }
 
 /* Style the table rows */
 table td {
-    padding: 8px;
-    font-size: 12px;
-    border-bottom: 1px solid #444; /* Slightly Darker Gray Border */
-    white-space: nowrap; /* Prevent line breaks within cells */
-    text-align: right; /* Right-align numeric data */
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
 }
 
 /* Style alternate rows with a background color */
 table tbody tr:nth-child(even) {
-    background-color: #222; /* Dark Gray Background for Even Rows */
+    background-color: #f2f2f2; /* Light Gray Background for Even Rows */
 }
 
 /* Style the first column (Name) differently if needed */
 table tbody tr td:first-child {
     font-weight: bold;
-    text-align: left; /* Left-align names */
 }
 
 /* Add some spacing and margin to the table */
 table, th, td {
-    border: 1px solid #333; /* Darker Gray Border */
+    border: 1px solid #ccc;
 }
 
 /* Add some responsive styles */
 @media screen and (max-width: 600px) {
     table {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
