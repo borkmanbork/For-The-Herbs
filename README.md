@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="style.css">
+
 # Buff Build Experiences in Pixel Hunter
 
 ## Online Farming Vs. Offline Farming
