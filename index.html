@@ -1,92 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herb Growers</title>
-    <link rel="stylesheet" href="styles.css">
+   
+
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <a href="#" class="logo">Herb Growers</a>
-                <ul class="nav-menu">
-                    <li><a href="#leaderboard">Leaderboard</a></li>
-                    <li><a href="#farming">Farming</a></li>
-                    <li><a href="#altar">Altar Progress</a></li>
-                    <li><a href="#pets">Pet Stats</a></li>
-                    <li><a href="#wings">Wing Progress</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="hero">
-            <h1>Welcome to Herb Growers</h1>
-            <p>Your place for online farming and more!</p>
-        </div>
-    </header>
+    <div class="leaderboard">
+        <h1>Weekly Leaderboard</h1>
+        <table id="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Level</th>
+                    <th>Contribution</th>
+                    <th>Stars This Week</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Leaderboard data will be generated here -->
+            </tbody>
+        </table>
+    </div>
+   
+    <h2>Online Farming Vs. Offline Farming</h2>
 
-    <section id="leaderboard" class="section">
-        <div class="container">
-            <h2>Weekly Leaderboard</h2>
-            <!-- Leaderboard table will be generated here -->
-        </div>
-    </section>
+    <h3>Online Farming:</h3>
+    <p>Ideal for harvesting Wing Essence and Synthetic Stone materials. Optimize your efficiency by farming the highest stage where you can consistently achieve 1500 kills per minute.</p>
 
-    <section id="farming" class="section">
-        <div class="container">
-            <h2>Online Farming Vs. Offline Farming</h2>
-            <h3>Online Farming:</h3>
-            <p>Ideal for harvesting Wing Essence and Synthetic Stone materials. Optimize your efficiency by farming the highest stage where you can consistently achieve 1500 kills per minute.</p>
+    <h3>Offline Farming:</h3>
+    <p>This becomes worthwhile after a significant damage upgrade. It is recommended to engage in 8-16 hours of offline farming to efficiently acquire the next set of traits. Staying longer than 8 hours is not advised; prioritize online farming if possible.</p>
 
-            <h3>Offline Farming:</h3>
-            <p>This becomes worthwhile after a significant damage upgrade. It is recommended to engage in 8-16 hours of offline farming to efficiently acquire the next set of traits. Staying longer than 8 hours is not advised; prioritize online farming if possible.</p>
+    <h2>Altar Progress</h2>
+    <ul>
+        <li>Prioritize leveling one equipment (Atk/HP) level 25 rather than evenly distributing levels across all equipment.</li>
+        <li>Every 5 levels of the altar yield a substantial damage boost.</li>
+    </ul>
 
-        </div>
-    </section>
+    <h2>Pet Stats for Awakening Dungeon and Boss</h2>
+    <ul>
+        <li>Might HP: 6</li>
+        <li>Might Attack Power: 5</li>
+        <li>Might Attack Speed: 5</li>
+        <li>Might Damage Increase: 5</li>
+        <li>Might Boss Damage Increase: 5</li>
+        <li>Might Buff/Active Skill Crit Damage: 5</li>
+    </ul>
 
-    <section id="altar" class="section">
-        <div class="container">
-            <h2>Altar Progress</h2>
-            <ul>
-                <li>Prioritize leveling one equipment (Atk/HP) level 25 rather than evenly distributing levels across all equipment.</li>
-                <li>Every 5 levels of the altar yield a substantial damage boost.</li>
-            </ul>
-        </div>
-    </section>
+    <h2>Wing Progress</h2>
+    <p>Level all wings equally until level 7. (Will provide an update with prioritized wings for level 8 later)</p>
 
-    <section id="pets" class="section">
-        <div class="container">
-            <h2>Pet Stats for Awakening Dungeon and Boss</h2>
-            <ul>
-                <li>Might HP: 6</li>
-                <li>Might Attack Power: 5</li>
-                <li>Might Attack Speed: 5</li>
-                <li>Might Damage Increase: 5</li>
-                <li>Might Boss Damage Increase: 5</li>
-                <li>Might Buff/Active Skill Crit Damage: 5</li>
-            </ul>
-        </div>
-    </section>
+    <h2>Hyper/Ultra Wing Stats to Prioritize</h2>
+    <ul>
+        <li>HP, Attack Power, Attack Speed, Damage Increase, Critical Damage, Buff/Active Crit Damage, Boss Damage, Skill Damage</li>
+    </ul>
 
-    <section id="wings" class="section">
-        <div class="container">
-            <h2>Wing Progress</h2>
-            <p>Level all wings equally until level 7. (Will provide an update with prioritized wings for level 8 later)</p>
+    <h2>Thoughts on Normal Monster Damage Stat</h2>
+    <p>Not essential since farming occurs in the lower stages where monsters are always one-shotted. Only worthwhile to include normal damage on equipment options.</p>
 
-            <h2>Hyper/Ultra Wing Stats to Prioritize</h2>
-            <ul>
-                <li>HP, Attack Power, Attack Speed, Damage Increase, Critical Damage, Buff/Active Crit Damage, Boss Damage, Skill Damage</li>
-            </ul>
-        </div>
-    </section>
+    <h2>Equipment Stats</h2>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Herb Growers. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+    <h3>Boss:</h3>
+    <ul>
+        <li>Crit Chance</li>
+        <li>Damage Increase</li>
+        <li>Damage to Boss</li>
+        <li>ATK</li>
+        <li>HP</li>
+    </ul>
+
+    <h3>Online Farming:</h3>
+    <ul>
+        <li>Damage</li>
+        <li>ATK</li>
+        <li>HP</li>
+        <li>Damage to Normal</li>
+        <li>Movement Speed</li>
+    </ul>
+
+    <h2>Buff Skill Layout for Pushing Mobs Without Dying</h2>
+    <img src="https://github.com/borkmanbork/Pixel-Hunter/assets/142642202/a4365b3e-e46b-4618-882a-7ab2ddabbf76" alt="Skill Layout for pushing mobs without dying">
+    <ul>
+        <li><strong>Dagger:</strong> Stun from Diagonal Slash, Battle Cry, and invulnerability from Shadow Summon.</li>
+        <li><strong>Bow:</strong> Empowered Arrows Stun.</li>
+    </ul>
+
+    <h2>Buff Skill Layout for Boss. Focus on Damage Options</h2>
+    <img src="https://github.com/borkmanbork/Pixel-Hunter/assets/142642202/cbfecfdd-e6ee-49f0-b81f-d0f81ddf738f" alt="Skill Layout for Boss">
+
+    <h2>Skill Rotation for Buff Builds for Awakening</h2>
+    <ul>
+        <li>Start with dagger before entering the dungeon</li>
+        <li>Auto Switch Off</li>
+        <li>Enter Dungeon</li>
+        <li>Wait for the last dagger skill to activate</li>
+        <li>Auto switch to bow.</li>
+    </ul>
+     <script src="script.js"></script>
 </body>
 </html>
-
