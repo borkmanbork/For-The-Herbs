@@ -51,13 +51,13 @@ This becomes worthwhile after a significant damage upgrade. It is recommended to
 - Damage to Normal
 - Movement Speed
 
-## Skill Layout for Pushing Mobs Without Dying
+## Buff Skill Layout for Pushing Mobs Without Dying
 ![Skill Layout for pushing mobs without dying](https://github.com/borkmanbork/Pixel-Hunter/assets/142642202/a4365b3e-e46b-4618-882a-7ab2ddabbf76)
 
 - **Dagger:** Stun from Diagonal Slash, Battle Cry, and invulnerability from Shadow Summon.
 - **Bow:** Empowered Arrows Stun.
 
-## Skill Layout for Boss. Focus on Damage Options
+## Buff Skill Layout for Boss. Focus on Damage Options
 ![Skill Layout for Boss](https://github.com/borkmanbork/Pixel-Hunter/assets/142642202/cbfecfdd-e6ee-49f0-b81f-d0f81ddf738f)
 
 ## Skill Rotation for Buff Builds for Awakening
