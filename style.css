@@ -1,13 +1,14 @@
 body {
-  background-color: #1a1a1a; /* Dark background color */
-  color: #ffffff; /* Light text color */
-}
-
-/* Additional styles for links, headings, etc. */
-a {
-  color: #66bfff; /* Link color in dark mode */
+  background-color: #191919; /* Dark background color for a forest theme */
+  color: #dcdcdc; /* Light text color for readability */
+  font-family: 'Garamond', serif; /* Serif font for a traditional and earthly feel */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #66bfff; /* Heading text color in dark mode */
+  color: #8b4513; /* Heading text color in a brown tone for an earthly touch */
+  font-family: 'Segoe UI', sans-serif; /* Modern sans-serif font for a clean look */
+}
+
+a {
+  color: #87ceeb; /* Link color in a sky blue tone */
 }
