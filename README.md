@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
 
-  <!-- Link to Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Garamond&family=Segoe+UI&display=swap" rel="stylesheet">
-
-  <!-- Link to CSS -->
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
 
 # Buff Build Experiences in Pixel Hunter
 
@@ -77,11 +66,8 @@ Worth it after getting a big damage upgrade. Best to do for 8-16 hours max of of
 
 ## Skill rotation for buff builds for awakening
 
-1. Start with dagger before entering dungeon
-2. Auto Switch Off
-3. Enter Dungeon
-4. Wait for last dagger skill to activate
-5. Auto switch to bow.
-
-</body>
-</html>
+- Start with dagger before entering dungeon
+- Auto Switch Off
+- Enter Dungeon
+- Wait for last dagger skill to activate
+- Auto switch to bow.
