@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your GitHub Pages Title</title>
 
   <!-- Link to Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Garamond&family=Segoe+UI&display=swap" rel="stylesheet">
@@ -12,11 +11,6 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
-<!-- Your Content Goes Here -->
-
-</body>
-</html>
 
 # Buff Build Experiences in Pixel Hunter
 
@@ -88,3 +82,6 @@ Worth it after getting a big damage upgrade. Best to do for 8-16 hours max of of
 3. Enter Dungeon
 4. Wait for last dagger skill to activate
 5. Auto switch to bow.
+
+</body>
+</html>
