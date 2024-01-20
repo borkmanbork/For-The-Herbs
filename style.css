@@ -18,12 +18,20 @@ body {
     padding: 10px;
     text-align: center;
     border-bottom: 2px solid #333; /* Darker Gray Border */
+    cursor: pointer; /* Add cursor pointer for collapsible behavior */
 }
 
 /* Style the leaderboard title */
 .leaderboard h1 {
     font-size: 24px;
     margin-bottom: 10px;
+}
+
+/* Style the table container for collapsible effect */
+.table-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 }
 
 /* Style the table */
