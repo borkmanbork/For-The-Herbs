@@ -7,3 +7,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: #f0f0f0; /* Off-white Gray Text for headers */
 }
+
+a {
+  color: #f0f0f0; /* Off-white Gray Text for links */
+}
+
+a:hover {
+  color: #007acc; /* Darker Blue on Hover */
+}
