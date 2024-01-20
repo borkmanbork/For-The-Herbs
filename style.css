@@ -1,6 +1,6 @@
 body {
-  background-color: #2b2b2b; /* Dark Gray */
-  color: #00cc66; /* Modern Green */
+  background-color: #0d2d2b; /* Dark Forest Green */
+  color: #f5f5f5; /* Off-white text color */
   font-family: 'Your Font', sans-serif;
 }
 
@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #00cc66; /* Modern Green */
+  color: #f5f5f5; /* Off-white text color for other links */
 }
 
 a:hover {
