@@ -1,0 +1,13 @@
+body {
+  background-color: #1a1a1a; /* Dark background color */
+  color: #ffffff; /* Light text color */
+}
+
+/* Additional styles for links, headings, etc. */
+a {
+  color: #66bfff; /* Link color in dark mode */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #66bfff; /* Heading text color in dark mode */
+}
