@@ -1,14 +1,17 @@
 body {
-  background-color: #1a1a1a; /* Dark background color */
-  color: #dcdcdc; /* Light text color */
-  font-family: 'Georgia', serif; /* Traditional font with roots in old language */
+  background-color: #2b2b2b; /* Dark Gray */
+  color: #00cc66; /* Modern Green */
+  font-family: 'Your Font', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #b3cc66; /* Heading text color in dark mode (Greenish tone for forest theme) */
-  font-family: 'Lora', serif; /* Modern serif font with a traditional touch */
+  color: #00cc66; /* Modern Green */
 }
 
 a {
-  color: #70a800; /* Link color in dark mode (Greenish tone for forest theme) */
+  color: #00cc66; /* Modern Green */
+}
+
+a:hover {
+  color: #00994d; /* Darker Green on Hover */
 }
