@@ -1,96 +1,6 @@
-// Function to populate the HTML table with data and enable column sorting
-function populateTable(csvData) {
-  const tableBody = document.querySelector('tbody');
-  const dataRows = csvData.split("\n");
-
-  // Extract column headers
-  const headers = dataRows[0].split(",");
-
-  // Create an array to store table data
-  const tableData = [];
-
-  for (let i = 1; i < dataRows.length; i++) {
-    const rowData = dataRows[i].split(",");
-    if (rowData.length === 4) {
-      const [herb, level, contribution, conquest] = rowData;
-      tableData.push({ herb, level, contribution, conquest });
-    }
-  }
-
-  // Sort the table data by column when a table heading is clicked
-  const table = document.querySelector('table');
-  const tableHead = table.querySelector('thead');
-
-  tableHead.addEventListener('click', (e) => {
-    if (e.target.tagName === 'TH') {
-      const column = e.target.textContent.toLowerCase();
-      const isAscending = !e.target.classList.contains('asc');
-
-      // Toggle sorting order class
-      tableHead.querySelectorAll('th').forEach((th) => {
-        th.classList.remove('asc', 'desc');
-      });
-      e.target.classList.toggle(isAscending ? 'asc' : 'desc');
-
-      // Sort the table data
-      tableData.sort((a, b) => {
-        return isAscending ? (a[column] > b[column] ? 1 : -1) : (a[column] < b[column] ? 1 : -1);
-      });
-
-      // Clear the table body
-      tableBody.innerHTML = '';
-
-      // Populate the table with sorted data
-      tableData.forEach((rowData) => {
-        const row = document.createElement("tr");
-
-        const herbCell = document.createElement("td");
-        herbCell.textContent = rowData.herb;
-        row.appendChild(herbCell);
-
-        const levelCell = document.createElement("td");
-        levelCell.textContent = rowData.level;
-        row.appendChild(levelCell);
-
-        const contributionCell = document.createElement("td");
-        contributionCell.textContent = rowData.contribution;
-        row.appendChild(contributionCell);
-
-        const conquestCell = document.createElement("td");
-        conquestCell.textContent = rowData.conquest;
-        row.appendChild(conquestCell);
-
-        tableBody.appendChild(row);
-      });
-    }
-  });
-
-  // Initial population of the table
-  tableData.forEach((rowData) => {
-    const row = document.createElement("tr");
-
-    const herbCell = document.createElement("td");
-    herbCell.textContent = rowData.herb;
-    row.appendChild(herbCell);
-
-    const levelCell = document.createElement("td");
-    levelCell.textContent = rowData.level;
-    row.appendChild(levelCell);
-
-    const contributionCell = document.createElement("td");
-    contributionCell.textContent = rowData.contribution;
-    row.appendChild(contributionCell);
-
-    const conquestCell = document.createElement("td");
-    conquestCell.textContent = rowData.conquest;
-    row.appendChild(conquestCell);
-
-    tableBody.appendChild(row);
-  });
-}
-
-// Modify this part to load your CSV data
-const csvData = `Herb,Level,Guild Contribution,Guild Conquest
+document.addEventListener('DOMContentLoaded', () => {
+  // Sample CSV data for initial table population
+  const csvData = `Herb,Level,Guild Contribution,Guild Conquest
 Senrik,13625,45776,73
 Rosumi,12744,1200,54
 PiroTree,12705,25160,54
@@ -114,5 +24,58 @@ Kaza,11640,17797,41
 Bobertson,9294,13470,31
 Imhim,7493,12837,24`;
 
-// Call the function to populate the table with data and enable sorting
-populateTable(csvData);
+  // Function to populate the table with CSV data
+  function populateTable(csvData) {
+    const tableBody = document.querySelector('tbody');
+    const dataRows = csvData.split("\n").slice(1); // Skip headers
+    tableBody.innerHTML = ''; // Clear existing rows
+
+    dataRows.forEach(row => {
+      const rowData = row.split(",");
+      const rowElement = document.createElement("tr");
+      rowData.forEach(cellData => {
+        const cell = document.createElement("td");
+        cell.textContent = cellData;
+        rowElement.appendChild(cell);
+      });
+      tableBody.appendChild(rowElement);
+    });
+  }
+
+  // Initial population of the table
+  populateTable(csvData);
+
+  // Function to sort and update the table
+  function sortTable(column, isAscending) {
+    const tableBody = document.querySelector('tbody');
+    const rowsArray = Array.from(tableBody.querySelectorAll('tr'));
+    const columnIndex = Array.from(tableBody.closest('table').querySelectorAll('thead th')).findIndex(th => th.textContent.trim().toLowerCase() === column);
+
+    rowsArray.sort((a, b) => {
+      const cellA = a.querySelectorAll('td')[columnIndex].textContent;
+      const cellB = b.querySelectorAll('td')[columnIndex].textContent;
+      const valueA = isNaN(Number(cellA)) ? cellA.toUpperCase() : Number(cellA);
+      const valueB = isNaN(Number(cellB)) ? cellB.toUpperCase() : Number(cellB);
+
+      if (valueA < valueB) return isAscending ? -1 : 1;
+      if (valueA > valueB) return isAscending ? 1 : -1;
+      return 0;
+    });
+
+    // Re-append rows in sorted order
+    rowsArray.forEach(row => tableBody.appendChild(row));
+  }
+
+  // Add event listener to all table headers for sorting
+  document.querySelectorAll('thead th').forEach(th => {
+    th.addEventListener('click', () => {
+      const column = th.textContent.trim().toLowerCase();
+      const isAscending = !th.classList.contains('asc');
+      document.querySelectorAll('thead th').forEach(header => {
+        header.classList.remove('asc', 'desc'); // Remove classes from all headers
+      });
+      th.classList.add(isAscending ? 'asc' : 'desc'); // Add class to the current header
+      sortTable(column, isAscending);
+    });
+  });
+});
