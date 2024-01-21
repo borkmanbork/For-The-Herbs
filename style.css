@@ -1,179 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+    <section class="table__body">
+      <table>
+        <thead>
+        <tr>
+          <th>Rank</th>
+          <th> Herb <span class="icon-arrow">&UpArrow;</span></th>
+          <th> Level <span class="icon-arrow">&UpArrow;</span></th>
+          <th> Contribution<span class="icon-arrow">&UpArrow;</span> </th>
+          <th> Conquest <span class="icon-arrow">&UpArrow;</span></th>
+        </tr>
+        </thead>
+        <tbody id="table-body">
 
-/* Custom color for h2 */
-h4 {
-  color: #d2b48c;
-  font-weight: normal;
-  margin-bottom: 5px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  transition: color 0.3s;
-}
+        </tbody>
+      </table>
+    </section>
+    <div>
 
+      <h4>Online Farming:</h4>
+      <p>Focus on farming Wing Essence and Synthetic Stones. Farm the highest stage where you can consistently achieve 1500 kills per minute.</p>
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #121212;
-  color: #9e9e9e;
-}
+      <h4>Offline Farming:</h4>
+      <p>For when you can't online farm or after a significant damage upgrade. It is recommended to engage in 8-16 hours of offline farming to efficiently acquire the next set of traits. Staying longer than 8 hours is not advised; prioritize online farming if possible.</p>
 
-main.table {
+      <h4>Altar Progress</h4>
+      <ul>
+        <li>Prioritize leveling one equipment (ATK/HP) to level 25 rather than evenly distributing levels across all equipment.</li>
+        <li>Every 5 levels of the altar yield a substantial damage boost.</li>
+      </ul>
 
-  width: auto;
-  height: auto;
-  background-color: #121212;
+      <h4>Pet Might Stats for Awakening Dungeon and Boss</h4>
+      <ul>
+        <li>6: Might HP</li>
+        <li>5: Might Attack Power</li>
+        <li>5: Might Attack Speed</li>
+        <li>5: Might Damage Increase</li>
+        <li>5: Might Boss Damage Increase</li>
+        <li>5: Might Buff/Active Skill Crit Damage</li>
+      </ul>
 
-  backdrop-filter: blur(7px);
-  box-shadow: 0 .4rem .8rem #0005;
-  border-radius: .8rem;
+      <h4>Wing Progress</h4>
+      <p>Level all wings equally until level 7. (Will provide an update with prioritized wings for level 8 later)</p>
 
-  overflow: hidden;
-}
+      <h4>Hyper/Ultra Wing Stats to Prioritize</h4>
+      <ul>
+        <li>HP, Attack Power, Attack Speed, Damage Increase, Critical Damage, Buff/Active Crit Damage, Boss Damage, Skill Damage</li>
+      </ul>
 
-.table__header {
+      <h4>Thoughts on Normal Monster Damage Stat</h4>
+      <p>Not essential since farming occurs in the lower stages where monsters are always one-shotted. Only worthwhile to include normal damage on equipment options.</p>
 
-  width: 100%;
-  height: 10%;
-  background-color: rgba(124, 39, 39, 0.27);
-  padding: .5rem .5rem;
+      <h4>Equipment Options</h4>
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+      <h4>Boss/Awakening:</h4>
+      <ul>
+        <li>Crit Chance</li>
+        <li>Damage Increase</li>
+        <li>Damage to Boss</li>
+        <li>ATK</li>
+        <li>HP</li>
+      </ul>
 
-.table__header .input-group {
+      <h4>Online Farming:</h4>
+      <ul>
+        <li>Damage</li>
+        <li>ATK</li>
+        <li>HP</li>
+        <li>Damage to Normal</li>
+        <li>Movement Speed</li>
+      </ul>
+      <h4>Buff Skill Layout - Immortal Pushing</h4>
+      <img src="https://github.com/borkmanbork/Pixel-Hunter/assets/142642202/a4365b3e-e46b-4618-882a-7ab2ddabbf76" alt="Skill Layout for pushing mobs without dying">
+      <ul>
+        <li>Dagger: Stun from Diagonal Slash, Battle Cry, and invulnerability from Shadow Summon.</li>
+        <li>Bow: Empowered Arrows stun.</li>
+      </ul>
 
-  width: 100%;
-  height: 100%;
-  background-color: #181818;
-  padding: 0 .8rem;
-  border-radius: 2rem;
+      <h4>Buff Skill Layout - Boss Killer</h4>
+      <img src="https://github.com/borkmanbork/Pixel-Hunter/assets/142642202/cbfecfdd-e6ee-49f0-b81f-d0f81ddf738f" alt="Skill Layout for Boss">
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  transition: .2s;
-}
-
-.table__header .input-group:hover {
-  width: 45%;
-  background-color: rgba(98, 40, 40, 0.53);
-  box-shadow: 0 .1rem .4rem #0002;
-  text-align: center;
-}
-
-
-
-.table__header .input-group input {
-
-  width: 100%;
-  padding: 0 .5rem 0 .3rem;
-  background-color: #181818;
-  border: none;
-  outline: none;
-  justify-content: center;
-  text-align: center;
-}
-
-.table__body {
-
-  text-align: center;
-  justify-content: center;
-  width: 40%;
-  height: fit-content; /* Set the desired height for displaying 10 items */
-  max-height: calc(89% - 1.6rem); /* Maximum height with respect to the layout */
-  background-color: #181818;
-  margin: auto;
-  border-radius: .6rem;
-  overflow-y: auto; /* Enable vertical scrollbar for overflowing content */
-}
-
-
-
-
-
-
-.table__body:hover::-webkit-scrollbar-thumb{
-  visibility: visible;
-}
-
-
-table {
-  width: 100%;
-  text-align: center;
-}
-
-
-
-thead th {
-
-  position: sticky;
-  background-color: #1f353a;
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-tbody tr:nth-child(even) {
-  background-color: rgba(14, 14, 14, 0.04);
-  justify-content: center;
-  text-align: center;
-}
-
-tbody tr {
-  --delay: .1s;
-  transition: .5s ease-in-out var(--delay), background-color 0s;
-  text-align: center;
-}
+      <h4>Skill Rotation for Buff Builds for Awakening</h4>
+      <ul>
+        <li>Start with dagger before entering the dungeon</li>
+        <li>Auto Switch Off</li>
+        <li>Enter Dungeon</li>
+        <li>Wait for the last dagger skill to activate</li>
+        <li>Auto switch to bow.</li>
+      </ul>
+    </div>
 
 
 
 
 
+<script src="script.js"></script>
 
 
+</body>
 
-
-
-thead th span.icon-arrow {
-  display: inline-block;
-  width: 1.1rem;
-  height: 1.1rem;
-  border-radius: 50%;
-  border: 1.1px solid transparent;
-
-  text-align: center;
-  font-size: 1rem;
-
-  margin-inside: .1rem;
-  transition: .2s ease-in-out;
-}
-
-thead th:hover span.icon-arrow{
-  border: 1px solid #676767;
-}
-
-thead th:hover {
-  color: #5d5959;
-}
-
-thead th.active span.icon-arrow{
-  background-color: #3b3a3a;
-  color: #3a3636;
-}
-
-thead th.asc span.icon-arrow{
-  transform: rotate(180deg);
-}
-
-thead th.active,tbody td.active {
-  color: #6c00bd;
-}
-
+</html>
