@@ -22,7 +22,10 @@ Royalbanana,11904,20544,45
 Anhjew,12124,800,44
 Kaza,11640,17797,41
 Bobertson,9294,13470,31
-Imhim,7493,12837,24`;
+Imhim,7493,12837,24
+Qqrage,11490,1000,0
+Ressurrectionx3,12223,1200,0
+Halosito,9723,200,0`;
 
   // Populate the table with CSV data
   function populateTable(csvData) {
